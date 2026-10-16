@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Portal Esportivo</title>
+    <!-- Carregamento dos estilos base e específicos -->
+    <link rel="stylesheet" href="../prototipo/assets/CSS/header.css">
+    <link rel="stylesheet" href="../prototipo/assets/CSS/contato.css">
+</head>
+
+<body>
+    <!-- Cabeçalho (compartilhado) -->
+    <header>
+        <h1>Apex League 2026</h1>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="../prototipo/tabela.html">Calendário e Tabela</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato / Sócio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="conteudo-principal" class="container">
+        <section class="contato-section">
+
+            <h2>Tem alguma sugestão, dúvida ou quer reportar um erro? Preencha o formulário abaixo.</h2>
+
+
+            <!-- Formulário com rótulos, instruções e validação nativa -->
+            <form action="#" method="POST" class="form-contato" novalidate>
+                <div class="form-group">
+                    <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+                    <input type="text" id="nome" name="nome" required aria-describedby="nome-instrucao">
+                    <small id="nome-instrucao" class="instrucao">Digite seu nome completo utilizando apenas
+                        letras.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required aria-describedby="email-instrucao">
+                    <small id="email-instrucao" class="instrucao">Exemplo: seu-email@dominio.com</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto <span aria-hidden="true">*</span></label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="" disabled selected hidden>Selecione uma opção</option>
+                        <option value="sugestao">Sugestão de pauta</option>
+                        <option value="erro">Reportar erro na tabela/resultado</option>
+                        <option value="outro">Outro assunto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Escreva sua mensagem <span aria-hidden="true">*</span></label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+
+            <!-- Mensagem de resultado (oculta por padrão, controlada via JS) -->
+            <div id="mensagem-resultado" class="mensagem-resultado" aria-live="polite" hidden>
+                Mensagem enviada com sucesso! Agradecemos o seu contato.
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Portal Esportivo. Conteúdo fictício para fins educacionais.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

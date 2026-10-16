@@ -1,0 +1,141 @@
+:root {
+    --cor-primaria: #0f172a;
+    --cor-secundaria: #0284c7;
+    --cor-texto: #334155;
+    --cor-fundo: #f8fafc;
+    --cor-branco: #ffffff;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contato-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contato-section header h2 {
+    font-size: 1.25rem;
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--cor-fundo);
+    padding-bottom: 0.5rem;
+}
+
+.contato-section header p {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-primaria);
+}
+
+.form-group label span {
+    color: #ef4444;
+    /* Vermelho discreto para o asterisco de obrigatório */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--cor-texto);
+    background-color: var(--cor-branco);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Estados interativos e foco acessível */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.instrucao {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.btn-enviar {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn-enviar:hover {
+    background-color: #0369a1;
+    /* Tom mais escuro da cor secundária para hover */
+}
+
+.btn-enviar:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+}
+
+/* Mensagem de resultado dinâmica */
+.mensagem-resultado {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.mensagem-resultado[hidden] {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    margin-top: auto;
+    /* Empurra o rodapé para a base da página, eliminando o espaço em branco */
+}

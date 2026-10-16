@@ -1,0 +1,129 @@
+:root {
+  --cor-primaria: #0f172a;
+  --cor-secundaria: #0284c7;
+  --cor-texto: #334155;
+  --cor-fundo: #f8fafc;
+  --cor-branco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Força a mesma fonte limpa para todas as páginas e prepara o layout Flex */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o body ocupe no mínimo a altura total da janela */
+}
+
+/* Faz o conteúdo principal crescer para empurrar o rodapé para o fim da tela */
+main, #conteudo-principal {
+  flex: 1;
+  width: 100%;
+}
+
+/* ==========================================
+   Estilos da Home (Conteúdo Principal)
+   ========================================== */
+#conteudo-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#conteudo-principal section {
+  background-color: var(--cor-branco);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+#conteudo-principal h2 {
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--cor-fundo);
+  padding-bottom: 0.5rem;
+}
+
+#conteudo-principal article h3 {
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.75rem;
+}
+
+#conteudo-principal article p {
+  color: var(--cor-texto);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+#conteudo-principal article a,
+#conteudo-principal p a {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#conteudo-principal article a:hover,
+#conteudo-principal p a:hover {
+  text-decoration: underline;
+}
+
+/* Estilização da Tabela Parcial na Home */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+caption {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #f1f5f9;
+  color: var(--cor-primaria);
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Rodapé Unificado */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  margin-top: auto; /* Empurra o rodapé para a base da página, eliminando o espaço em branco */
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+  #conteudo-principal {
+    padding: 2rem;
+  }
+}
