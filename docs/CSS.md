@@ -10,12 +10,7 @@ Todos os valores globais do sistema de design estão declarados no escopo `:root
   --color-accent: #2a9d8f;
   --color-background: #f8f9fa;
   --color-text: #212529;
-  --color-muted: #6c757d;
-
-  /* Estados Interativos */
-  --color-focus: #ffb703;
-  --color-error: #d90429;
-  --color-success: #38b000;
+  --color-muted: #6c757d;S
 
   /* Tipografia */
   --font-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

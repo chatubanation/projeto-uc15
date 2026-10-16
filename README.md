@@ -2,7 +2,7 @@
 
 Portal mobile-first desenvolvido para acompanhamento em tempo real da temporada esportiva de futebol, oferecendo tabela de classificação, notícias, calendário de jogos e área interativa de favoritos.
 
-- **URL Publicada (Staging/Prod):** https://chatubanation.github.]]]]]]]]]]]]]]]]]]
+- **URL Publicada (Staging/Prod):** https://github.com/chatubanation
 - **Versão / Tag de Entrega:** `v1.0.0`
 
 ---
@@ -39,7 +39,7 @@ O objetivo do produto é fornecer uma experiência acessível, rápida e intuiti
 
 ---
 
-## Estrutura do Repositório
+## Estrutura do Projeto
 
 / (PROJETO UC15)
 ├─ docs/
