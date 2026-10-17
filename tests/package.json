@@ -1,0 +1,13 @@
+{
+    "name": "uc15-tests",
+    "version": "1.0.0",
+    "description": "Suíte de testes automatizados do Portal Esportivo UC15",
+    "main": "fluxos.spec.js",
+    "scripts": {
+      "test": "npx playwright test",
+      "test:headed": "npx playwright test --headed"
+    },
+    "devDependencies": {
+      "@playwright/test": "^1.40.0"
+    }
+  }
